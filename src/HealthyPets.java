@@ -1,6 +1,8 @@
-import javax.lang.model.type.ErrorType;
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.List;
+
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
 /**
  * Created by Sana Eneroth Boukchana
@@ -13,7 +15,7 @@ public class HealthyPets {
     public static void main(String[] args) {
 
         ArrayList<Animal> allAnimals = new ArrayList<>();
-        // lägg in som List för att sedan kalla på "SuperList" för att inte behöva ändra på fler ställen
+        // lägg in som List för att sedan kalla på "SuperList"?
 
         allAnimals.add(new Dog("Sixten", 5000));
         allAnimals.add(new Dog("Dogge", 10000));
@@ -26,13 +28,14 @@ public class HealthyPets {
         Animal animal = findAnimal(allAnimals, name);
 
         if (animal != null) {
-            String foodName = switch (animal.getFoodType()) {
-                case DOGFOOD -> "dog food";
-                case CATFOOD -> "cat food";
-                case SNAKEPELLETS -> "snake pellets";
-            };
+            String foodName = animal.getFoodType().getTypeOfFood();
             JOptionPane.showMessageDialog(null,
                     name + " should eat " + animal.getAmountOfFood() + "g of " + foodName);
+        } else if (name == null || name.trim().isEmpty()) {
+            JOptionPane.showMessageDialog
+                    (null,
+                            "Ooops please restart the program and try again",
+                            "ERROR", ERROR_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null,
                     name + " is not here unfortunately.");
