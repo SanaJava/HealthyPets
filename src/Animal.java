@@ -7,15 +7,25 @@
  */
 public interface Animal {
 
-    public String getName();
+    String getName();
 
-    public int getAmountOfFood();
+    int getAmountOfFood();
 
-    public FoodType getFoodType();
+    FoodType getFoodType();
 
     enum FoodType {
-        DOGFOOD, CATFOOD, SNAKEPELLETS
+        DOGFOOD("dog food"), CATFOOD("cat food"), SNAKEPELLETS("snake pellets");
+
+        FoodType(String typeOfFood){
+            this.typeOfFood = typeOfFood;
+        }
+        private String typeOfFood;
+
+        public String getTypeOfFood() {
+            return typeOfFood;
+        }
     }
+
 
 }
 
