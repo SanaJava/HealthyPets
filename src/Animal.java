@@ -5,7 +5,7 @@
  * Project: HealthyPets
  * Copyright: MIT
  */
-public interface Animal {
+public interface Animal { //Hela interface är polymorfiskt
 
     String getName();
 
@@ -25,7 +25,6 @@ public interface Animal {
             return typeOfFood;
         }
     }
-
 
 }
 

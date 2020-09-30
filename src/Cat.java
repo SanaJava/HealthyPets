@@ -12,7 +12,7 @@ public class Cat extends Mammal{
     }
 
     @Override
-    public int getFoodDivisor() {
+    protected int getFoodDivisor() {
         return 150;
     }
 

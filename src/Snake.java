@@ -5,7 +5,7 @@
  * Project: HealtyPets
  * Copyright: MIT
  */
-public class Snake implements Animal{
+public class Snake implements Animal {
 
     private String name;
     private int weight;

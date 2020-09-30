@@ -7,13 +7,12 @@
  */
 public class Dog extends Mammal {
 
-    public Dog(String name, int weight){
+    public Dog(String name, int weight) {
         super(name, weight);
-
     }
 
     @Override
-    public int getFoodDivisor() {
+    protected int getFoodDivisor() {
         return 100;
     }
 
@@ -22,3 +21,4 @@ public class Dog extends Mammal {
         return FoodType.DOGFOOD;
     }
 }
+

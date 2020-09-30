@@ -25,5 +25,6 @@ public abstract class Mammal implements Animal {
         return weight / getFoodDivisor();
     }
 
-    public abstract int getFoodDivisor();
+    protected abstract int getFoodDivisor();
+    //getFoodDivisor intern implementation = inkapsling (pga kan inte anropas direkt från ex. main)
 }
