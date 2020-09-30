@@ -5,7 +5,7 @@
  * Project: HealthyPets
  * Copyright: MIT
  */
-public class Cat extends Mammal{
+public class Cat extends Mammal {
 
     public Cat(String name, int weight) {
         super(name, weight);

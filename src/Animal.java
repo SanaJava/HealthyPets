@@ -16,9 +16,10 @@ public interface Animal { //Hela interface är polymorfiskt
     enum FoodType {
         DOGFOOD("dog food"), CATFOOD("cat food"), SNAKEPELLETS("snake pellets");
 
-        FoodType(String typeOfFood){
+        FoodType(String typeOfFood) {
             this.typeOfFood = typeOfFood;
         }
+
         private String typeOfFood;
 
         public String getTypeOfFood() {
